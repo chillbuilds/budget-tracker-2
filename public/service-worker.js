@@ -9,8 +9,7 @@ self.addEventListener("install", function(evt) {
       console.log("Your files are pre-cached")
       return cache.addAll(FILES_TO_CACHE)
     })
-  )
-  self.skipWaiting()
+  );self.skipWaiting()
 })
 
 self.addEventListener("activate", function(evt) {
@@ -24,9 +23,7 @@ self.addEventListener("activate", function(evt) {
           }})
       )
     })
-  )
-
-  self.clients.claim()
+  );self.clients.claim()
 })
 
 self.addEventListener("fetch", function(evt) {
